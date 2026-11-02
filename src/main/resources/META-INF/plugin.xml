@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.yara.intellij</id>
+    <name>YARA Language Support</name>
+    <version>1.0.0</version>
+    <vendor>YARA Plugin</vendor>
+
+    <description><![CDATA[
+        Provides syntax highlighting for YARA rule files (.yar, .yara) in IntelliJ IDEA.
+        <br/><br/>
+        Features:
+        <ul>
+            <li>Syntax highlighting for YARA keywords, strings, comments, variables, and more</li>
+            <li>Recognition of .yar and .yara file extensions</li>
+            <li>Support for all YARA language constructs including hex strings, regex patterns, and section headers</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="YARA"
+                implementationClass="com.yara.YaraFileType"
+                fieldName="INSTANCE"
+                language="YARA"
+                extensions="yar;yara"/>
+
+        <lang.parserDefinition
+                language="YARA"
+                implementationClass="com.yara.YaraParserDefinition"/>
+
+        <lang.syntaxHighlighterFactory
+                language="YARA"
+                implementationClass="com.yara.highlighting.YaraSyntaxHighlighterFactory"/>
+    </extensions>
+</idea-plugin>
