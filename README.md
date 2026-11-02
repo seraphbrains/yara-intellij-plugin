@@ -1,5 +1,5 @@
 # YARA Language Plugin for IntelliJ IDEA
-
+Vibecoded® simple syntax highlighter for YARA, since some people want to earn money on stupid sh like this. Simple,stupid, ai slop. Enjoy your yara files not looking like a Graveyard anymore!
 An IntelliJ IDEA plugin that provides **syntax highlighting** for [YARA](https://virustotal.github.io/yara/) rule files (`.yar` and `.yara`).
 
 ## Features
